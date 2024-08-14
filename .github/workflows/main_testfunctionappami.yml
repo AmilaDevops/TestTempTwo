@@ -29,6 +29,7 @@ jobs:
         shell: pwsh
         run: |
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
+          echo "AZURE_FUNCTIONAPP_PACKAGE_PATH=${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}"
           dotnet build --configuration Release --output ./output
           popd
 
