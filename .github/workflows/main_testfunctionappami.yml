@@ -39,5 +39,5 @@ jobs:
         with:
           app-name: 'testfunctionappami'
           slot-name: 'Production'
-          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+          package: './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_276C4602376640DC86AD00C45EF5085C }}
