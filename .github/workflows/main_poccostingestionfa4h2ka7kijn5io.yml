@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
-  DOTNET_VERSION: 'v4.0' # set this to the dotnet version to use
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '/AzureCost_to_LogAnalytics' # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '3.1.x' # set this to the dotnet version to use
 
 jobs:
   build-and-deploy:
@@ -48,5 +48,5 @@ jobs:
         with:
           app-name: 'poccostingestionfa4h2ka7kijn5io'
           slot-name: 'Production'
-          package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
+          package: './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
           
